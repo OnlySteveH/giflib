@@ -29,4 +29,11 @@ public class GifController {
         modelMap.put("gif", gif);
         return "gif-details";
     }
+
+    @RequestMapping(value = "/favorites")
+    public String faveGifs(ModelMap modelMap){
+        List<Gif> gifs = gifRepository.getFavorites();
+        modelMap.put("gifs", gifs);
+        return "favorites";
+    }
 }
