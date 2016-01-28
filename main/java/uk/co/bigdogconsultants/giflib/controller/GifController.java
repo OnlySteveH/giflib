@@ -36,4 +36,6 @@ public class GifController {
         modelMap.put("gifs", gifs);
         return "favorites";
     }
+
+
 }
